@@ -4,7 +4,7 @@ class Facepp
   default_params Rails.application.credentials.facepp
 
   def detect(image_file)
-    options = { body: { image_file: File.open(image_file) } }
+    options = { body: { image_file: image_file } }
     self.class.post('/facepp/v3/detect', options)
   end
 

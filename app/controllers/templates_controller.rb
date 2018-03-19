@@ -1,4 +1,5 @@
 class TemplatesController < ApplicationController
+  protect_from_forgery with: :null_session
   before_action :set_template, only: [:show, :edit, :update, :destroy]
 
   # GET /templates
@@ -24,7 +25,10 @@ class TemplatesController < ApplicationController
   # POST /templates
   # POST /templates.json
   def create
-    @template = Template.new(template_params)
+    image = template_params[:image]
+    rectangle = Facepp.new.detect_face_rectangle(image.tempfile)
+    @template = Template.new(title: template_params[:title], rectangle: rectangle)
+    @template.image.attach(image)
 
     respond_to do |format|
       if @template.save
@@ -69,6 +73,6 @@ class TemplatesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def template_params
-      params.require(:template).permit(:title, :image, :rectangle)
+      params.require(:template).permit(:title, :image)
     end
 end
