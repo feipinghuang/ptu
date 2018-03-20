@@ -16,7 +16,7 @@
     <% @templates.each do |template| %>
       <tr>
         <td><%= template.title %></td>
-        <td><%= template.image %></td>
+        <td><%= image_tag template.image %></td>
         <td><%= template.rectangle %></td>
         <td><%= link_to 'Show', template %></td>
         <td><%= link_to 'Edit', edit_template_path(template) %></td>
