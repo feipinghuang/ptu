@@ -1,6 +1,6 @@
 GIT
-  remote: https://github.com/mycolorway/activestorage_qiniu.git
-  revision: 5b11f7011b4fd4e88b03218171f12d5aaf6f4cbb
+  remote: https://github.com/guanyun/activestorage_qiniu.git
+  revision: 970eb368e77d1fe1d030f8d353ef3388e4b4646a
   specs:
     activestorage_qiniu (0.1.5)
       qiniu (>= 6.9.0)
