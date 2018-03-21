@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/mycolorway/activestorage_qiniu.git
+  revision: 5b11f7011b4fd4e88b03218171f12d5aaf6f4cbb
+  specs:
+    activestorage_qiniu (0.1.5)
+      qiniu (>= 6.9.0)
+      rails (>= 5.2.0.alpha, < 6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -78,6 +86,8 @@ GEM
     concurrent-ruby (1.0.5)
     concurrent-ruby (1.0.5-java)
     crass (1.0.3)
+    domain_name (0.5.20170404)
+      unf (>= 0.0.5, < 1.0.0)
     erubi (1.7.1)
     execjs (2.7.0)
     ffi (1.9.23)
@@ -86,6 +96,8 @@ GEM
     ffi (1.9.23-x86-mingw32)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
     httparty (0.16.1)
       multi_xml (>= 0.5.2)
     i18n (0.9.5)
@@ -105,6 +117,9 @@ GEM
     marcel (0.3.1)
       mimemagic (~> 0.3.2)
     method_source (0.9.0)
+    mime-types (3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0521)
     mimemagic (0.3.2)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
@@ -118,6 +133,7 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (4.2.0)
+    netrc (0.11.0)
     nio4r (2.3.0)
     nio4r (2.3.0-java)
     nokogiri (1.8.2)
@@ -132,6 +148,9 @@ GEM
     pg (1.0.0-x86-mingw32)
     puma (3.11.3)
     puma (3.11.3-java)
+    qiniu (6.9.0)
+      mime-types (~> 3.1)
+      rest-client (~> 2.0)
     rack (2.0.4)
     rack-test (0.8.3)
       rack (>= 1.0, < 3)
@@ -163,6 +182,25 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    rest-client (2.0.2)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
+    rest-client (2.0.2-x64-mingw32)
+      ffi (~> 1.9)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
+    rest-client (2.0.2-x86-mingw32)
+      ffi (~> 1.9)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
+    rest-client (2.0.2-x86-mswin32)
+      ffi (~> 1.9)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
     ruby_dep (1.5.0)
     sass (3.5.5)
       sass-listen (~> 4.0.0)
@@ -203,6 +241,12 @@ GEM
       tzinfo (>= 1.0.0)
     uglifier (4.1.8)
       execjs (>= 0.3.0, < 3)
+    unf (0.1.4)
+      unf_ext
+    unf (0.1.4-java)
+    unf_ext (0.0.7.5)
+    unf_ext (0.0.7.5-x64-mingw32)
+    unf_ext (0.0.7.5-x86-mingw32)
     web-console (3.5.1)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -222,6 +266,7 @@ PLATFORMS
   x86-mswin32
 
 DEPENDENCIES
+  activestorage_qiniu!
   bootsnap (>= 1.1.0)
   byebug
   capistrano (~> 3.7, >= 3.7.1)

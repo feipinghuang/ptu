@@ -38,6 +38,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'httparty', '>= 0.16.1'
 
+gem 'activestorage_qiniu', github: 'mycolorway/activestorage_qiniu'
+
 gem 'capistrano', '~> 3.7', '>= 3.7.1'
 gem 'capistrano-rails', '~> 1.2'
 gem 'capistrano-passenger', '~> 0.2.0'
