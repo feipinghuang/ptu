@@ -12,6 +12,7 @@ qiniu:
   secret_key: <%= Rails.application.credentials.dig(:qiniu, :secret_key) %>
   bucket: face-fusion
   domain: cdn.thexstore.cn
+  protocol: https
 
 procution:
   service: Disk
