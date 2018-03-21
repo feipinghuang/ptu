@@ -11,7 +11,7 @@ qiniu:
   access_key: <%= Rails.application.credentials.dig(:qiniu, :access_key) %>
   secret_key: <%= Rails.application.credentials.dig(:qiniu, :secret_key) %>
   bucket: face-fusion
-  domain: p5ogbyioh.bkt.clouddn.com
+  domain: cdn.thexstore.cn
 
 procution:
   service: Disk
